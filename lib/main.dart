@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/screens/categories_meals_screen.dart';
 import 'package:meals/screens/categories_screen.dart';
+import 'package:meals/screens/meals_details_screen.dart';
 import 'package:meals/utils/app_routes.dart';
 
 void main() {
@@ -14,7 +15,6 @@ class Meals extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         fontFamily: "Raleway",
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -24,15 +24,23 @@ class Meals extends StatelessWidget {
               ),
             ),
         appBarTheme: ThemeData.light().appBarTheme.copyWith(
-            titleTextStyle: const TextStyle(
+              iconTheme: const IconThemeData(
+                color: Colors.white, //change your color here
+              ),
+              centerTitle: true,
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              titleTextStyle: const TextStyle(
                 fontFamily: "Raleway",
                 fontSize: 24,
-                fontWeight: FontWeight.bold)),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         useMaterial3: true,
       ),
       routes: {
         AppRoutes.home: (context) => const CategoriesScreen(),
         AppRoutes.categoryMeal: (context) => const CategoryMealScreen(),
+        AppRoutes.mealDetails: (context) => const MealDetailScreen(),
       },
     );
   }

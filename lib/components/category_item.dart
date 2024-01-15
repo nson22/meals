@@ -25,10 +25,14 @@ class CategoryItem extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          gradient: LinearGradient(colors: [
-            category.color.withOpacity(.5),
-            category.color,
-          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+          gradient: LinearGradient(
+            colors: [
+              category.color.withOpacity(.5),
+              category.color,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
         ),
         child: Text(
           category.title,

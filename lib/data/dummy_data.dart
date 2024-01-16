@@ -146,7 +146,7 @@ const dummyMeals = [
     id: 'm4',
     categories: ['c4'],
     title: 'Wiener Schnitzel',
-    cost: Cost.expansive,
+    cost: Cost.expensive,
     complexity: Complexity.medium,
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
@@ -179,7 +179,7 @@ const dummyMeals = [
     id: 'm5',
     categories: ['c2', 'c5', 'c10'],
     title: 'Salad with Smoked Salmon',
-    cost: Cost.expansive,
+    cost: Cost.expensive,
     complexity: Complexity.simple,
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
@@ -212,7 +212,7 @@ const dummyMeals = [
     categories: ['c6', 'c10'],
     title: 'Delicious Orange Mousse',
     cost: Cost.cheap,
-    complexity: Complexity.hard,
+    complexity: Complexity.difficult,
     imageUrl:
         'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
     duration: 240,
@@ -305,7 +305,7 @@ const dummyMeals = [
     categories: ['c9'],
     title: 'Chocolate Souffle',
     cost: Cost.cheap,
-    complexity: Complexity.hard,
+    complexity: Complexity.difficult,
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
     duration: 45,
@@ -351,7 +351,7 @@ const dummyMeals = [
     id: 'm10',
     categories: ['c2', 'c5', 'c10'],
     title: 'Asparagus Salad with Cherry Tomatoes',
-    cost: Cost.expansive,
+    cost: Cost.expensive,
     complexity: Complexity.simple,
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',

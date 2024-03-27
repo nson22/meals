@@ -1,0 +1,14 @@
+appId: com.example.meals
+---
+- launchApp
+
+
+- tapOn: Italiano
+
+- assertVisible: Italiano
+
+- assertVisible: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato

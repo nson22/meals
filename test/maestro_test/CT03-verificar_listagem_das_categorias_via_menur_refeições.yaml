@@ -1,0 +1,11 @@
+appId: com.example.meals
+---
+- launchApp
+
+- assertVisible: "Lista de Categorias"
+
+- tapOn: Open navigation menu
+
+- tapOn: Refeições
+
+- assertVisible: Lista de Categorias

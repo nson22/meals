@@ -1,0 +1,17 @@
+appId: com.example.meals
+---
+
+- runFlow: CT07-visualizar_lista_de_favoritos.yaml
+
+- tapOn: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato
+
+- tapOn:
+    point: 89%,92%
+
+- back
+
+- assertVisible: Nenhuma refeição foi marcada como favoritas

@@ -1,0 +1,57 @@
+appId: com.example.meals
+---
+- launchApp
+
+- assertVisible: "Lista de Categorias"
+
+- tapOn: Italiano
+
+- assertVisible: Italiano
+
+- assertVisible: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato
+
+- tapOn: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato
+
+- assertVisible: Spaghetti with Tomato Sauce
+
+- assertVisible: Ingredientes
+
+- assertVisible: 4 Tomatoes
+
+- assertVisible: 1 Tablespoon of Olive Oil
+
+- assertVisible: 1 Onion
+
+- assertVisible: 250g Spaghetti
+
+- assertVisible: Spices
+
+- scrollUntilVisible:
+    element: Cheese (optional)
+    direction: DOWN
+
+- assertVisible: Cheese (optional)
+
+- assertVisible: Passos
+
+- assertVisible: |-
+    1
+    Cut the tomatoes and the onion into small pieces.
+
+- scrollUntilVisible:
+    element:  |-
+        2
+        Boil some water - add salt to it once it boils.
+    direction: DOWN
+
+- assertVisible: |-
+    2
+    Boil some water - add salt to it once it boils.

@@ -1,0 +1,25 @@
+appId: com.example.meals
+---
+- launchApp
+
+- assertVisible: "Lista de Categorias"
+
+- assertVisible: "Italiano"
+
+- assertVisible: "Rápido & Fácil"
+
+- assertVisible: "Hamburgers"
+
+- assertVisible: "Alemã"
+
+- assertVisible: "Leve & Saudável"
+
+- assertVisible: "Exótica"
+
+- assertVisible: "Café da Manhã"
+
+- assertVisible: "Asiática"
+
+- assertVisible: "Francesa"
+
+- assertVisible: "Verão"

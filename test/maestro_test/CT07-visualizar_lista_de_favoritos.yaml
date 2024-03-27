@@ -1,0 +1,31 @@
+appId: com.example.meals
+---
+
+- launchApp 
+
+- assertVisible: "Lista de Categorias"
+
+- tapOn: Italiano
+
+- tapOn: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato
+
+- tapOn:
+    point: 89%,92%
+
+- back
+
+- back
+
+- tapOn: |-
+    Favoritos
+    Tab 2 of 2
+
+- assertVisible: |-
+    Spaghetti with Tomato Sauce
+    20 min
+    Simples
+    Barato

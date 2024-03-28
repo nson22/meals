@@ -15,9 +15,9 @@ appId: com.example.meals
 - tapOn:
     point: 89%,92%
 
-- tapOn: Back
+- back
 
-- tapOn: Back
+- back
 
 - tapOn: |-
     Favoritos

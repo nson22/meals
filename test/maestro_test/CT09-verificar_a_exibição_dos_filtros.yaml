@@ -1,0 +1,20 @@
+appId: com.example.meals
+---
+
+- launchApp
+
+- tapOn: "Open navigation menu"
+
+- tapOn: "Configurações"
+
+- assertVisible: "Configurações"
+
+- assertVisible: "Filtros"
+
+- assertVisible: "Sem Glutén\nSó exibir refeições sem glúten!"
+
+- assertVisible: "Sem Lactose\nSó exibir refeições sem lactose!"
+
+- assertVisible: "Vegana\nSó exibir refeições veganas!"
+
+- assertVisible: "Vegetariana\nSó exibir refeições vegetarianas!"

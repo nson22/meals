@@ -1,5 +1,6 @@
 appId: com.example.meals
 ---
+
 - launchApp
 
 - assertVisible: "Lista de Categorias"

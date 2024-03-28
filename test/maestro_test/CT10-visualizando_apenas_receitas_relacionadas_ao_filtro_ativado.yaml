@@ -1,0 +1,24 @@
+appId: com.example.meals
+---
+
+- launchApp
+
+- tapOn: Italiano
+
+- assertVisible: "Spaghetti with Tomato Sauce\n20 min\nSimples\nBarato"
+
+- back
+
+- tapOn: "Open navigation menu"
+
+- tapOn: "Configurações"
+
+- tapOn: "Sem Glutén\nSó exibir refeições sem glúten!"
+
+- tapOn: "Open navigation menu"
+
+- tapOn: "Refeições"
+
+- tapOn: "Italiano"
+
+- assertNotVisible: "Spaghetti with Tomato Sauce\n20 min\nSimples\nBarato"

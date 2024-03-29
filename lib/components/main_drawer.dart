@@ -28,6 +28,7 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            key: const Key('Drawer'),
             height: 120,
             width: double.infinity,
             padding: const EdgeInsets.all(20),

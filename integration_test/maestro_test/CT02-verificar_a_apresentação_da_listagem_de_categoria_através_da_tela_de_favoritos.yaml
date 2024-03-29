@@ -5,19 +5,11 @@ appId: com.example.meals
 
 - assertVisible: "Lista de Categorias"
 
-- assertVisible: |-
-    Favoritos
-    Tab 2 of 2
-
 - tapOn: |-
     Favoritos
     Tab 2 of 2
 
 - assertVisible: Meus Favoritos
-
-- assertVisible: |-
-    Categorias
-    Tab 1 of 2
 
 - tapOn: |-
     Categorias

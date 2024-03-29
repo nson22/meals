@@ -98,6 +98,6 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 patrol:
-  app_name: meals
+  app_name: meals                                                                                                                                                                                           
   android:
     package_name: com.example.meals

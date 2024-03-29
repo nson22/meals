@@ -9,7 +9,7 @@ import 'package:patrol/src/native/contracts/contracts.dart';
 import 'package:test_api/src/backend/invoker.dart';
 
 // START: GENERATED TEST IMPORTS
-import 'patrol_test/categories_test.dart' as patrol_test__categories_test;
+import 'C:/Users/neosi/VSCode/flutter/meals/./integration_test/patrol_test/categories_test.dart' as C:__Users__neosi__VSCode__flutter__meals__.__integration_test__patrol_test__categories_test;
 // END: GENERATED TEST IMPORTS
 
 Future<void> main() async {
@@ -66,7 +66,7 @@ Future<void> main() async {
   });
 
   // START: GENERATED TEST GROUPS
-  group('patrol_test.categories_test', patrol_test__categories_test.main);
+  group('C:.Users.neosi.VSCode.flutter.meals...integration_test.patrol_test.categories_test', C:__Users__neosi__VSCode__flutter__meals__.__integration_test__patrol_test__categories_test.main);
   // END: GENERATED TEST GROUPS
 
   final dartTestGroup = await testExplorationCompleter.future;

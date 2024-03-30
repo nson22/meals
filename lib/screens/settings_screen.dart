@@ -29,6 +29,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     Function(bool) onChanged,
   ) {
     return SwitchListTile(
+      key: Key(title.replaceFirst(RegExp(r'é'), 'e')),
       title: Text(
         title,
         style: const TextStyle(
@@ -62,16 +63,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           Expanded(
             child: ListView(
+              key: const Key('filters'),
               children: [
                 _createSwitch(
-                  'Sem Glutén',
+                  'Glutén',
                   'Só exibir refeições sem glúten!',
                   settings!.isGlutenFree,
                   (value) => setState(() => settings!.isGlutenFree = value),
                 ),
                 const Divider(height: 0),
                 _createSwitch(
-                  'Sem Lactose',
+                  'Lactose',
                   'Só exibir refeições sem lactose!',
                   settings!.isLactoseFree,
                   (value) => setState(() => settings!.isLactoseFree = value),

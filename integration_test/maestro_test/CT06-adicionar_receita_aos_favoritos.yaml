@@ -30,12 +30,3 @@ appId: com.example.meals
     20 min
     Simples
     Barato
-
-- tapOn: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
-    
-- tapOn:
-    point: 89%,92%

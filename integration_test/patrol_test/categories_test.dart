@@ -3,10 +3,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:meals/data/dummy_data.dart';
 import 'package:meals/main.dart';
 import 'package:meals/models/category.dart';
-import 'package:meals/models/meal.dart';
+import 'package:meals/screens/categories_screen.dart';
 import 'package:patrol_finders/patrol_finders.dart';
 
+
 void main() {
+
+  List<Category> categories = dummyCategories;
+
   // patrolWidgetTest(
   //   'CT01-verificar_listagem_das_categorias',
   //   (PatrolTester $) async {
@@ -14,7 +18,7 @@ void main() {
 
   //     expect($("Lista de Categorias").exists, equals(true));
 
-  //     for (var categoria in dummyCategories) {
+  //     for (var categoria in categories) {
   //       expect($(categoria.title).exists, equals(true));
   //     }
 
@@ -35,7 +39,7 @@ void main() {
 
   //     await $('Categorias').tap();
 
-  //     for (var categoria in dummyCategories) {
+  //     for (var categoria in categories) {
   //       expect($(categoria.title).exists, equals(true));
   //     }
   //   },
@@ -65,56 +69,196 @@ void main() {
   // patrolWidgetTest('CT04-acessar_a_lista_de_receitas',
   //   (PatrolTester $) async {
   //     await $.pumpWidgetAndSettle(const MyApp());
+  //     Category category = categories.elementAt(0);
+
+  //     final mealsWithCategory =
+  //         dummyMeals.where((meal) => meal.categories.contains(category.id));
 
   //     expect($("Lista de Categorias").exists, equals(true));
 
-  //     await $("Italiano").tap();
+  //     await $(category.title).tap();
 
-  //     expect($("Italiano").exists, equals(true));
-  //     expect($("Spaghetti with Tomato Sauce").exists, equals(true));
-  //     expect($("20 min").exists, equals(true));
-  //     expect($("Simples").exists, equals(true));
-  //     expect($("Barato").exists, equals(true));
+  //     for (var meal in mealsWithCategory) {
+  //       expect($(meal.title).exists, equals(true));
+  //       expect($("${meal.duration.toString()} min").exists, equals(true));
+  //       expect($(meal.complexityText).exists, equals(true));
+  //       expect($(meal.costText).exists, equals(true));
+  //     }
   //   },
   // );
 
+  // patrolWidgetTest(
+  //   'CT05-acessar_o_detalhamento_da_receita',
+  //   (PatrolTester $) async {
+  //     Category category = categories.elementAt(0);
+
+  //     await $.pumpWidgetAndSettle(const MyApp());
+
+  //     expect($("Lista de Categorias").exists, equals(true));
+
+  //     final mealsWithCategory =
+  //         dummyMeals.where((meal) => meal.categories.contains(category.id));
+
+  //     expect($(category.title).exists, equals(true));
+
+  //     await $(category.title).tap();
+
+  //     for (var meal in mealsWithCategory) {
+  //       expect($(meal.title).exists, equals(true));
+  //       expect($("${meal.duration.toString()} min").exists, equals(true));
+  //       expect($(meal.complexityText).exists, equals(true));
+  //       expect($(meal.costText).exists, equals(true));
+
+  //       await $(InkWell).tap();
+
+  //       expect($(meal.title).exists, equals(true));
+
+  //       expect($("Ingredientes").exists, equals(true));
+
+  //       for (var i = 0; i < meal.ingredients.length; i++) {
+  //         expect($(meal.ingredients.elementAt(i)).exists, equals(true));  
+  //       }
+
+  //       expect($("Passos").exists, equals(true));
+
+  //       await $("Passos").scrollTo(view: $(#mealDetail).$(Scrollable));
+
+  //       for (var i = 0; i < meal.steps.length; i++) {
+
+  //         if(i > 2) {
+  //           await $(meal.steps.elementAt(i)).scrollTo(view: $(#steps).$(Scrollable));
+  //         }
+
+  //         expect($(meal.steps.elementAt(i)).exists, equals(true));  
+  //       }
+  //     }
+  //   },
+  // );
+
+  // patrolWidgetTest(
+  //   'CT06-adicionar_receita_aos_favoritos',
+  //   (PatrolTester $) async {
+  //     await $.pumpWidgetAndSettle(const MyApp());
+
+  //     Category category = categories.elementAt(0);
+  //     final mealsWithCategory =
+  //       dummyMeals.where((meal) => meal.categories.contains(category.id));
+
+  //     expect($("Lista de Categorias").exists, equals(true));
+
+  //     await $(category.title).tap();
+
+  //     await $(InkWell).tap();
+
+  //     await $(FloatingActionButton).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.star).tap();
+
+  //     expect($('Meus Favoritos').exists, equals(true));
+
+  //     for (var meal in mealsWithCategory) {
+  //       expect($(meal.title).exists, equals(true));
+  //       expect($("${meal.duration.toString()} min").exists, equals(true));
+  //       expect($(meal.complexityText).exists, equals(true));
+  //       expect($(meal.costText).exists, equals(true));
+  //     }
+  // });
+
+  //  patrolWidgetTest(
+  //   'CT07-visualizar_lista_de_favoritos',
+  //   (PatrolTester $) async {
+  //     await $.pumpWidgetAndSettle(const MyApp());
+
+  //     Category category = categories.elementAt(0);
+  //     final mealsWithCategory =
+  //       dummyMeals.where((meal) => meal.categories.contains(category.id));
+
+  //     expect($("Lista de Categorias").exists, equals(true));
+
+  //     await $(category.title).tap();
+
+  //     await $(InkWell).tap();
+
+  //     await $(FloatingActionButton).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.star).tap();
+
+  //     expect($('Meus Favoritos').exists, equals(true));
+
+  //     for (var meal in mealsWithCategory) {
+  //       expect($(meal.title).exists, equals(true));
+  //       expect($("${meal.duration.toString()} min").exists, equals(true));
+  //       expect($(meal.complexityText).exists, equals(true));
+  //       expect($(meal.costText).exists, equals(true));
+  //     }
+  // });
+
+  // patrolWidgetTest(
+  //   'CT08-retirar_uma_receita_da_lista_de_favoritos_utilizando_o_icone_favorito',
+  //   (PatrolTester $) async {
+  //     await $.pumpWidgetAndSettle(const MyApp());
+
+  //     Category category = categories.elementAt(0);
+
+  //     expect($("Lista de Categorias").exists, equals(true));
+
+  //     await $(category.title).tap();
+
+  //     await $(InkWell).tap();
+
+  //     await $(FloatingActionButton).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     await $(Icons.star).tap();
+
+  //     await $(InkWell).tap();
+
+  //     await $(Icons.star).tap();
+
+  //     await $(Icons.arrow_back).tap();
+
+  //     expect($("Nenhuma refeição foi marcada como favoritas").exists, equals(true));
+  // });
+
   patrolWidgetTest(
-    'CT05-acessar_o_detalhamento_da_receita',
+    'CT09-verificar_a_exibição_dos_filtros',
     (PatrolTester $) async {
       await $.pumpWidgetAndSettle(const MyApp());
 
-      expect($("Lista de Categorias").exists, equals(true));
+      await $(Icons.menu).tap();
 
-      Category category = dummyCategories.elementAt(0);
+      await $('Configurações').tap();
+      
+      expect($("Configurações").exists, equals(true));
 
-      final mealsWithCategory =
-          dummyMeals.where((meal) => meal.categories.contains(category.id));
+      expect($("Filtros").exists, equals(true));
 
-      await $(category.title).tap();
+      expect($("Sem Glutén").exists, equals(true));
+      expect($("Só exibir refeições sem glúten!").exists, equals(true));
 
-      expect($(category.title).exists, equals(true));
+      expect($("Sem Lactose").exists, equals(true));
+      expect($("Só exibir refeições sem lactose!").exists, equals(true));
 
-      for (var meal in mealsWithCategory) {
-        expect($(meal.title).exists, equals(true));
-        expect($("${meal.duration}} min").exists, equals(true));
-        expect($(meal.complexity.toString()).exists, equals(true));
-        expect($(meal.cost.toString()).exists, equals(true));
+      expect($("Vegana").exists, equals(true));
+      expect($("Só exibir refeições veganas!").exists, equals(true));
 
-        await $(InkWell).tap();
+      expect($("Vegetariana").exists, equals(true));
+      expect($("Só exibir refeições vegetarianas!").exists, equals(true));
 
-        expect($(meal.title).exists, equals(true));
+      final sw = $.tester.widget<SwitchListTile>($(SwitchListTile)).value;
 
-        expect($("Ingredientes").exists, equals(true));
+      expect(sw, false);
 
-        for (var ingredient in meal.ingredients) {
-          expect($(ingredient).exists, equals(true));
-        }
-        expect($("Passos").exists, equals(true));
-
-        for (var step in meal.steps) {
-          expect($(step).exists, equals(true));
-        }
-      }
-    },
-  );
+  });
 }

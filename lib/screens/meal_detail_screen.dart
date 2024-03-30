@@ -42,6 +42,7 @@ class MealDetailScreen extends StatelessWidget {
         title: Text(meal.title),
       ),
       body: SingleChildScrollView(
+        key: const Key('mealDetail'),
         child: Column(
           children: [
             SizedBox(
@@ -55,6 +56,7 @@ class MealDetailScreen extends StatelessWidget {
             _createSectionTitle(context, 'Ingredientes'),
             _createSectionContainer(
                 ListView.builder(
+                  key: const Key('ingredients'),
                   itemCount: meal.ingredients.length,
                   itemBuilder: (ctx, index) {
                     return Card(
@@ -73,6 +75,7 @@ class MealDetailScreen extends StatelessWidget {
             _createSectionTitle(context, 'Passos'),
             _createSectionContainer(
                 ListView.builder(
+                  key: const Key('steps'),
                   itemCount: meal.steps.length,
                   itemBuilder: (ctx, index) {
                     return Column(

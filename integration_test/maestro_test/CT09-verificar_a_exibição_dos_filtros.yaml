@@ -11,9 +11,9 @@ appId: com.example.meals
 
 - assertVisible: "Filtros"
 
-- assertVisible: "Sem Glutén\nSó exibir refeições sem glúten!"
+- assertVisible: "Glutén\nSó exibir refeições sem glúten!"
 
-- assertVisible: "Sem Lactose\nSó exibir refeições sem lactose!"
+- assertVisible: "Lactose\nSó exibir refeições sem lactose!"
 
 - assertVisible: "Vegana\nSó exibir refeições veganas!"
 

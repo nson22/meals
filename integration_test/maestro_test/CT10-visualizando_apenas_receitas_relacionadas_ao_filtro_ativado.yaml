@@ -13,7 +13,7 @@ appId: com.example.meals
 
 - tapOn: "Configurações"
 
-- tapOn: "Sem Glutén\nSó exibir refeições sem glúten!"
+- tapOn: "Glutén\nSó exibir refeições sem glúten!"
 
 - tapOn: "Open navigation menu"
 

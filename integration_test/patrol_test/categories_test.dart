@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:meals/data/dummy_data.dart';
 import 'package:meals/main.dart';
 import 'package:meals/models/category.dart';
-import 'package:meals/screens/categories_screen.dart';
 import 'package:patrol_finders/patrol_finders.dart';
 
 
@@ -45,7 +44,7 @@ void main() {
     },
   );
 
-  patrolWidgetTest('CT03-verificar_listagem_das_categorias_via_menur_refeições',
+  patrolWidgetTest('CT03-verificar_listagem_das_categorias_via_menu_refeições',
     (PatrolTester $) async {
       await $.pumpWidgetAndSettle(const MyApp());
 

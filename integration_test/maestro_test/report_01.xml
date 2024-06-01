@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="127.0.0.1:6555" tests="9" failures="1" time="109">
+    <testcase id="CT09-verificar_a_exibição_dos_filtros" name="CT09-verificar_a_exibição_dos_filtros" classname="CT09-verificar_a_exibição_dos_filtros" time="8" status="SUCCESS"/>
+    <testcase id="CT06-adicionar_receita_aos_favoritos" name="CT06-adicionar_receita_aos_favoritos" classname="CT06-adicionar_receita_aos_favoritos" time="14" status="SUCCESS"/>
+    <testcase id="CT05-acessar_o_detalhamento_da_receita" name="CT05-acessar_o_detalhamento_da_receita" classname="CT05-acessar_o_detalhamento_da_receita" time="13" status="SUCCESS"/>
+    <testcase id="CT03-verificar_listagem_das_categorias_via_menu_refeições" name="CT03-verificar_listagem_das_categorias_via_menu_refeições" classname="CT03-verificar_listagem_das_categorias_via_menu_refeições" time="7" status="SUCCESS"/>
+    <testcase id="CT04-acessar_a_lista_de_receitas" name="CT04-acessar_a_lista_de_receitas" classname="CT04-acessar_a_lista_de_receitas" time="5" status="SUCCESS"/>
+    <testcase id="CT02-verificar_a_apresentação_da_listagem_de_categoria_através_da_tela_de_favoritos" name="CT02-verificar_a_apresentação_da_listagem_de_categoria_através_da_tela_de_favoritos" classname="CT02-verificar_a_apresentação_da_listagem_de_categoria_através_da_tela_de_favoritos" time="8" status="SUCCESS"/>
+    <testcase id="CT01-verificar_listagem_das_categorias" name="CT01-verificar_listagem_das_categorias" classname="CT01-verificar_listagem_das_categorias" time="3" status="SUCCESS"/>
+    <testcase id="CT08-retirar_uma_receita_da_lista_de_favoritos_utilizando_o_icone_favorito" name="CT08-retirar_uma_receita_da_lista_de_favoritos_utilizando_o_icone_favorito" classname="CT08-retirar_uma_receita_da_lista_de_favoritos_utilizando_o_icone_favorito" time="37" status="ERROR">
+      <failure>Assertion is false: ".*Nenhuma refeição foi marcada como favoritas" is visible</failure>
+    </testcase>
+    <testcase id="CT07-visualizar_lista_de_favoritos" name="CT07-visualizar_lista_de_favoritos" classname="CT07-visualizar_lista_de_favoritos" time="14" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

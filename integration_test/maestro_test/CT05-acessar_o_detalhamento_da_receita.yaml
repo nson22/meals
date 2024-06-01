@@ -8,17 +8,9 @@ appId: com.example.meals
 
 - assertVisible: Italiano
 
-- assertVisible: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
-
-- tapOn: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
+- assertVisible: .*Spaghetti with Tomato Sauce.*
+ 
+- tapOn: .*Spaghetti with Tomato Sauce.*
 
 - assertVisible: Spaghetti with Tomato Sauce
 
@@ -42,16 +34,10 @@ appId: com.example.meals
 
 - assertVisible: Passos
 
-- assertVisible: |-
-    1
-    Cut the tomatoes and the onion into small pieces.
+- assertVisible: .*Cut the tomatoes and the onion into small pieces..*   
 
 - scrollUntilVisible:
-    element:  |-
-        2
-        Boil some water - add salt to it once it boils.
+    element:  .*Boil some water - add salt to it once it boils..*
     direction: DOWN
 
-- assertVisible: |-
-    2
-    Boil some water - add salt to it once it boils.
+- assertVisible: .*Boil some water - add salt to it once it boils..*

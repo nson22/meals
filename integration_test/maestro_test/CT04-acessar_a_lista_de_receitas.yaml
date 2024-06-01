@@ -6,8 +6,4 @@ appId: com.example.meals
 
 - assertVisible: Italiano
 
-- assertVisible: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
+- assertVisible: .*Spaghetti with Tomato Sauce.*

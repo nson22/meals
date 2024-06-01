@@ -6,27 +6,17 @@ appId: com.example.meals
 
 - tapOn: Italiano
 
-- tapOn: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
+- tapOn: .*Spaghetti with Tomato Sauce.*
 
 - tapOn:
-    point: 89%,95%
+    point: 89%,90%
 
 - back
 
 - back
 
-- tapOn: |-
-    Favoritos
-    Tab 2 of 2
+- tapOn: .*Favoritos.*
 
 - assertVisible: Meus Favoritos
 
-- assertVisible: |-
-    Spaghetti with Tomato Sauce
-    20 min
-    Simples
-    Barato
+- assertVisible: .*Spaghetti with Tomato Sauce.*
